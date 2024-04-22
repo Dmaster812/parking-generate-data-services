@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>telran</groupId>
+        <artifactId>parking-generate-data-service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>parking-event-validation</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!--    <dependencies>-->
+    <!--        <dependency>-->
+    <!--            <groupId>telran</groupId>-->
+    <!--            <artifactId>parking-event-validation</artifactId>-->
+    <!--            <version>0.0.1-SNAPSHOT</version>-->
+    <!--            <scope>compile</scope>-->
+    <!--        </dependency>-->
+    <!--    </dependencies>-->
+
+</project>
+
+<!--&lt;!&ndash;=========================================================================================================&ndash;&gt;-->
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--    <modelVersion>4.0.0</modelVersion>-->
+<!--    <parent>-->
+<!--        <groupId>telran</groupId>-->
+<!--        <artifactId>ParkingDataService</artifactId>-->
+<!--        <version>0.0.1-SNAPSHOT</version>-->
+<!--    </parent>-->
+
+<!--    <artifactId>parking-event-validation</artifactId>-->
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+
+<!--    <properties>-->
+<!--        <maven.compiler.source>20</maven.compiler.source>-->
+<!--        <maven.compiler.target>20</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--    </properties>-->
+<!--    <dependencies>-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>telran</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>parking-event-generator</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>0.0.1-SNAPSHOT</version>&ndash;&gt;-->
+<!--&lt;!&ndash;            <scope>compile</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter</artifactId>-->
+<!--                </dependency>-->
+
+<!--&lt;!&ndash;                <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>spring-boot-starter-test</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.scala-lang</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>scala-reflect</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <version>2.13.11</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>spring-cloud-stream-test-binder</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <version>4.1.1</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.projectlombok</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>lombok</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <scope>provided</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <artifactId>spring-cloud-starter-config</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependency>&ndash;&gt;-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-config-server</artifactId>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-stream</artifactId>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.projectlombok</groupId>-->
+<!--                    <artifactId>lombok</artifactId>-->
+<!--                    <scope>provided</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-test</artifactId>-->
+<!--                    <scope>test</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-stream-test-binder</artifactId>-->
+<!--                    <scope>test</scope>-->
+<!--                </dependency>-->
+<!--    </dependencies>-->
+
+<!--</project>-->
+<!--============================================================-->
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--    <modelVersion>4.0.0</modelVersion>-->
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>3.2.4</version>-->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+<!--    </parent>-->
+<!--    <groupId>telran</groupId>-->
+<!--    <artifactId>parking-event-validation</artifactId>-->
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+<!--    <name>CarValidationService</name>-->
+<!--    <description>CarValidationService</description>-->
+<!--    <properties>-->
+<!--        <java.version>17</java.version>-->
+<!--        <spring-cloud.version>2023.0.1</spring-cloud.version>-->
+<!--    </properties>-->
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+<!--                <version>${spring-cloud.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+<!--    <dependencies>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.scala-lang</groupId>-->
+        <!--            <artifactId>scala-reflect</artifactId>-->
+        <!--            <version>2.13.11</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-stream-test-binder</artifactId>-->
+        <!--            <version>4.1.1</version>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.projectlombok</groupId>-->
+        <!--            <artifactId>lombok</artifactId>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-config</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-config-server</artifactId>-->
+        <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-stream</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-test</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-stream-test-binder</artifactId>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+<!--</project>-->
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+        <!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+        <!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+        <!--    <modelVersion>4.0.0</modelVersion>-->
+        <!--    <parent>-->
+        <!--        <groupId>telran</groupId>-->
+        <!--        <artifactId>ParkingDataService</artifactId>-->
+        <!--        <version>0.0.1-SNAPSHOT</version>-->
+        <!--    </parent>-->
+
+        <!--    <artifactId>parking-event-validation</artifactId>-->
+        <!--&lt;!&ndash;    <dependencies>&ndash;&gt;-->
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.springframework.cloud</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>spring-cloud-stream-test-support</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <version>4.1.1</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;    </dependencies>&ndash;&gt;-->
+        <!--    <properties>-->
+        <!--        <maven.compiler.source>20</maven.compiler.source>-->
+        <!--        <maven.compiler.target>20</maven.compiler.target>-->
+        <!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+        <!--    </properties>-->
+
+        <!--</project>-->
