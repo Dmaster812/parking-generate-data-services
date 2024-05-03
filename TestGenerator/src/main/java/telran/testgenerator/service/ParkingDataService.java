@@ -1,4 +1,4 @@
-package generator.service;
+package telran.testgenerator.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -7,9 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import generator.dto.CameraRecordDto;
+import telran.testgenerator.dto.RecordDto;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -33,7 +34,7 @@ public class ParkingDataService {
         int parkingIdToRemove = 0;
 
 
-        Map<Integer, CameraRecordDto> parkingDataMap = new HashMap<>();
+        Map<Integer, RecordDto> parkingDataMap = new HashMap<>();
         ObjectMapper objectMapper = new ObjectMapper();
         Random random = new Random();
 
@@ -46,7 +47,7 @@ public class ParkingDataService {
             return () -> {
 
                 objectMapper.registerModule(new JavaTimeModule());
-                CameraRecordDto cameraDataDto = getRandomParkingData();
+                RecordDto cameraDataDto = getRandomParkingData();
 
                 try {
                     sleep(recordsDelay);
@@ -66,7 +67,7 @@ public class ParkingDataService {
 
                     // Update the record with new time
                     LocalDateTime localDateTime = parkingDataMap.get(parkingId).getLocalDateTime();
-                    parkingDataMap.get(parkingId).setLocalDateTime(localDateTime.plusMinutes(random.nextInt(5, 20)));
+                    parkingDataMap.get(parkingId).setLocalDateTime(localDateTime.plusMinutes(random.nextInt(5, 30)));
 
                     int selector = random.nextInt(1, 100);
 
@@ -86,7 +87,7 @@ public class ParkingDataService {
 
                 try {
 
-                    log.atInfo().log("Sending record: {}", parkingDataMap.get(parkingId));
+                    System.out.println(parkingDataMap.get(parkingId));
                     return objectMapper.writeValueAsString(parkingDataMap.get(parkingId));
 
                 } catch (Exception e) {
@@ -100,16 +101,16 @@ public class ParkingDataService {
 
         }
 
-        private CameraRecordDto getRandomParkingData() {
+        private RecordDto getRandomParkingData() {
 
-            long carRegNumber = random.longs(1000000, 90000000)
+            long carRegNumber = random.longs(1000000, 99999999)
                     .limit(1)
                     .findAny()
                     .getAsLong();
 
-            return new CameraRecordDto(random.nextInt(1, maxParkingLots),
+            return new RecordDto(random.nextInt(1, maxParkingLots),
                     getIsraelPlateNumber(carRegNumber),
-                    LocalDateTime.now());
+                    LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES));
 
 
         }

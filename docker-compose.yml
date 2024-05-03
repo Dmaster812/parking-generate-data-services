@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+    config-server:
+        image: config-server
+    parking-event-generator:
+        image: parking-event-generator
+    parking-event-validation:
+        image: parking-event-validation
