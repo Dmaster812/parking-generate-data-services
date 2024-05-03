@@ -1,0 +1,12 @@
+spring.application.name=parking-event-generator
+
+spring.config.import=configserver:http://${CONFIG_SERVER_HOST:localhost}:${CONFIG_SERVER_PORT:8888}
+spring.cloud.config.fail-fast=true
+spring.cloud.config.retry.initial-interval=10000
+spring.cloud.config.retry.max-interval=100000
+
+#logging.level.org.springframework = DEBUG
+
+
+#max-parking-lots=20
+#records-delay=2000
